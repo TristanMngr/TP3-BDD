@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+
+    <listener>
+        <listener-class>config.InitDAOFactory</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>PartOne</servlet-name>
+        <servlet-class>part_one.servlets.PartOneServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PartOne</servlet-name>
+        <url-pattern>/part-one</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PartTwoDepartment</servlet-name>
+        <servlet-class>part_two.servlets.Department</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PartTwoDepartment</servlet-name>
+        <url-pattern>/part-two/department</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PartTwoEmployee</servlet-name>
+        <servlet-class>part_two.servlets.Employee</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PartTwoEmployee</servlet-name>
+        <url-pattern>/part-two/employee</url-pattern>
+    </servlet-mapping>
+</web-app>
