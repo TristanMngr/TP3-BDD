@@ -15,8 +15,9 @@
 <body>
 
 <div class="ui container">
-    <h1 class="ui center aligned sizer vertical huge header">TP3</h1>
-    <i class="desktop icon"></i>
+    <h1 class="ui largetitle center aligned header">
+        TP3
+    </h1>
 
     <div class="ui stackable two column grid">
         <div class="column">
@@ -33,12 +34,12 @@
                 <h3 class="ui top attached block header">Move employee to an other department</h3>
                 <form class="ui form bottom attached segment" action="/part-one" method="post">
                     <div class="field">
-                        <label>Employee to move (number)</label>
-                        <input type="text" name="employee" placeholder="employee">
+                        <label>Employee</label>
+                        <input type="text" name="employee" placeholder="employee id">
                     </div>
                     <div class="field">
-                        <label>to department (number)</label>
-                        <input type="text" name="department" placeholder="department">
+                        <label>Department</label>
+                        <input type="text" name="department" placeholder="department id">
                     </div>
                     <input type="hidden" value="move-employee" name="dispatch">
                     <button class="ui primary button" type="submit">Submit</button>
@@ -47,8 +48,8 @@
                 <h3 class="ui top attached block header">Display table</h3>
                 <form class="ui form bottom attached segment" action="/part-one" method="post">
                     <div class="field">
-                        <label>Table to display</label>
-                        <input type="text" name="table" placeholder="employee">
+                        <label>Table</label>
+                        <input type="text" name="table" placeholder="table name">
                     </div>
                     <input type="hidden" value="display-table" name="dispatch">
                     <button class="ui primary button" type="submit">Submit</button>
@@ -62,8 +63,8 @@
                 <h3 class="ui top attached block header">Find Department</h3>
                 <form class="ui form bottom attached segment" action="/part-two/department" method="get">
                     <div class="field">
-                        <label>Find departement</label>
-                        <input type="text" name="department-id" placeholder="id department">
+                        <label>Departement</label>
+                        <input type="text" name="department-id" placeholder="department id">
                     </div>
                     <button class="ui primary button" type="submit">Submit</button>
                 </form>
@@ -71,8 +72,8 @@
                 <h3 class="ui top attached block header">Find Employee</h3>
                 <form class="ui form bottom attached segment" action="/part-two/employee" method="get">
                     <div class="field">
-                        <label>Find employee</label>
-                        <input type="text" name="employee-id" placeholder="id employee">
+                        <label>Employee</label>
+                        <input type="text" name="employee-id" placeholder="employee id">
                     </div>
                     <button class="ui primary button" type="submit">Submit</button>
                 </form>

@@ -32,7 +32,6 @@ public class Employee extends HttpServlet {
 
         emp = this.empDAO.find(Integer.parseInt(employee));
 
-        System.out.println(emp.getEname());
         req.setAttribute(EMPLOYEE, emp);
 
         this.getServletContext().getRequestDispatcher(VIEW_EMPLOYEE).forward(req, resp);

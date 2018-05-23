@@ -25,6 +25,7 @@
                     <th>Ename</th>
                     <th>Efirst</th>
                     <th>Job</th>
+                    <th>Manager</th>
                     <th>Hiredate</th>
                     <th>Salaire</th>
                     <th>Comm</th>
@@ -38,6 +39,7 @@
                     <td><c:out value="${employee.ename}"/></td>
                     <td><c:out value="${employee.efirst}"/></td>
                     <td><c:out value="${employee.job}"/></td>
+                    <td><c:out value="${employee.mgrId}"/></td>
                     <td><c:out value="${employee.hiredate}"/></td>
                     <td><c:out value="${employee.sal}"/></td>
                     <td><c:out value="${employee.comm}"/></td>

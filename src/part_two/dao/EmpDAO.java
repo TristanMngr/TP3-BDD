@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import static part_two.dao.DAOUtility.silentClose;
 import static part_two.dao.DAOUtility.silentCloses;
 
 public class EmpDAO extends DAO<Emp> {
@@ -23,6 +24,7 @@ public class EmpDAO extends DAO<Emp> {
         PreparedStatement preparedStatement = null;
         ResultSet         resultSet         = null;
         ResultSet         resultSetDept     = null;
+        ResultSet         resultSetMgr      = null;
 
         Emp  emp  = new Emp();
         Dept dept = new Dept();
@@ -43,28 +45,37 @@ public class EmpDAO extends DAO<Emp> {
                 emp.setSal(resultSet.getInt("sal"));
                 emp.setComm(resultSet.getInt("comm"));
                 emp.setTel(resultSet.getInt("tel"));
-                emp.setMgr(null);
 
+                // DEPTNO
+                preparedStatement.clearParameters();
                 preparedStatement = connexion.prepareStatement("SELECT * FROM DEPT WHERE DEPTNO = ?");
-                preparedStatement.setInt(1, Integer.parseInt(resultSet.getString("mgr")));
+                preparedStatement.setInt(1, Integer.parseInt(resultSet.getString("deptno")));
                 resultSetDept = preparedStatement.executeQuery();
 
-                while(resultSetDept.next()) {
-                    System.out.println(resultSetDept.getLong("deptno"));
-                    System.out.println(resultSetDept.getLong("dname"));
+                while (resultSetDept.next()) {
                     dept.setDeptno(resultSetDept.getLong("deptno"));
                     dept.setDname(resultSetDept.getString("dname"));
                     dept.setLoc(resultSetDept.getString("loc"));
                 }
 
                 emp.setDeptno(dept);
-            }
 
-            /*preparedStatement = connexion.prepareStatement("SELECT * FROM MGR WHERE EMPNO = ?");*/
+                // MGR
+                preparedStatement.clearParameters();
+                preparedStatement = connexion.prepareStatement("SELECT * FROM EMP WHERE MGR = ?");
+                preparedStatement.setInt(1, resultSet.getInt("mgr"));
+                resultSetMgr = preparedStatement.executeQuery();
+
+                // search resursively with find()
+                if (resultSetMgr.next()) {
+                    emp.setMgr(find(resultSetMgr.getInt("mgr")));
+                }
+            }
         } catch (SQLException e) {
             throw new DAOException(e);
         } finally {
             silentCloses(resultSet, preparedStatement, connexion);
+
         }
         return emp;
     }

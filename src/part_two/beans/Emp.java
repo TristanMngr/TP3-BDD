@@ -97,4 +97,8 @@ public class Emp {
     public Long getDepnoId(){
         return deptno.getDeptno();
     }
+
+    public Long getMgrId(){
+        return mgr.getEmpno();
+    }
 }
