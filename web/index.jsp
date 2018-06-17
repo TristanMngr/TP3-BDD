@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>welcome page</title>
+    <title>TP3 Welcome page</title>
     <link rel="stylesheet" type="text/css" href="assets/css/semantic.css">
     <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
 </head>
@@ -19,7 +19,7 @@
         TP3
     </h1>
 
-    <div class="ui stackable two column grid">
+    <div class="ui stackable three column grid">
         <div class="column">
             <div class="ui clearing segment">
                 <h2>PART I</h2>
@@ -59,7 +59,7 @@
 
         <div class="column">
             <div class="ui clearing segment">
-                <h2>PART 2</h2>
+                <h2>PART II</h2>
                 <h3 class="ui top attached block header">Find Department</h3>
                 <form class="ui form bottom attached segment" action="/part-two/department" method="get">
                     <div class="field">
@@ -77,9 +77,15 @@
                     </div>
                     <button class="ui primary button" type="submit">Submit</button>
                 </form>
+            </div>
+        </div>
 
+
+        <div class="column">
+            <div class="ui clearing segment">
+                <h2>PART III</h2>
                 <h3 class="ui top attached block header">Generate Beans</h3>
-                <form class="ui form bottom attached segment" action="/part-two/generate-beans" method="post">
+                <form class="ui form bottom attached segment" action="/part-three/generate-beans" method="post">
                     <button class="ui primary button" type="submit">
                         Generate Beans
                     </button>
@@ -88,7 +94,6 @@
         </div>
     </div>
 </div>
-
 </div>
 </body>
 </html>

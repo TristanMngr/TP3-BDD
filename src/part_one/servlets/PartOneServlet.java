@@ -1,6 +1,6 @@
 package part_one.servlets;
 
-import part_one.Query;
+import part_one.QueryFirstPart;
 import part_two.dao.DAOFactory;
 
 import javax.servlet.ServletException;
@@ -34,7 +34,7 @@ public class PartOneServlet extends HttpServlet {
 
     private static final String DAO_FACTORY         = "daofactory";
 
-    private Query queriesFirstPart;
+    private QueryFirstPart queriesFirstPart;
 
     @Override
     public void init() {

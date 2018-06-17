@@ -1,25 +1,25 @@
 package part_two.dao;
 
-import part_two.beans.Dependants;
+import part_two.beans.Dependents;
 
-public class DependantsDAO extends DAO<Dependants> {
+public class DependantsDAO extends DAO<Dependents> {
     @Override
-    public Dependants find(int t) {
+    public Dependents find(int t) {
         return null;
     }
 
     @Override
-    public boolean create(Dependants object) {
+    public boolean create(Dependents object) {
         return false;
     }
 
     @Override
-    public boolean update(Dependants object) {
+    public boolean update(Dependents object) {
         return false;
     }
 
     @Override
-    public boolean delete(Dependants object) {
+    public boolean delete(Dependents object) {
         return false;
     }
 }

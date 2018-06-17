@@ -11,10 +11,10 @@ import java.util.Map;
 import static part_two.dao.DAOUtility.silentClose;
 import static part_two.dao.DAOUtility.silentCloses;
 
-public class Query {
+public class QueryFirstPart {
     private DAOFactory daoFactory;
 
-    public Query(DAOFactory daoFactory) {
+    public QueryFirstPart(DAOFactory daoFactory) {
         this.daoFactory = daoFactory;
     }
 

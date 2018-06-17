@@ -1,7 +1,7 @@
 package part_two.dao;
 
-import part_one.Query;
-import part_two.beans.Dept;
+import part_one.QueryFirstPart;
+import part_three.QueryThirdPart;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -70,8 +70,12 @@ public class DAOFactory {
         return DriverManager.getConnection(url, username, password);
     }
 
-    public Query getQueryFirstPart() {
-        return new Query(this);
+    public QueryFirstPart getQueryFirstPart() {
+        return new QueryFirstPart(this);
+    }
+
+    public QueryThirdPart getQueryThirdPart() {
+        return new QueryThirdPart(this);
     }
 
     public DeptDAO getDeptDAO() {

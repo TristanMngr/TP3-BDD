@@ -1,4 +1,4 @@
 package part_two.beans;
 
-public class Dependants {
+public class Dependents {
 }

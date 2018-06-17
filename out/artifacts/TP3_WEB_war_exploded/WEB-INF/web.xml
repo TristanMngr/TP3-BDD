@@ -38,4 +38,14 @@
         <servlet-name>PartTwoEmployee</servlet-name>
         <url-pattern>/part-two/employee</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GenerateBeans</servlet-name>
+        <servlet-class>part_three.servlets.GenerateBeans</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GenerateBeans</servlet-name>
+        <url-pattern>/part-three/generate-beans</url-pattern>
+    </servlet-mapping>
 </web-app>

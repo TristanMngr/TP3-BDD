@@ -25,7 +25,7 @@
                     <th>Ename</th>
                     <th>Efirst</th>
                     <th>Job</th>
-                    <th>Mgr</th>
+                    <th>Manager</th>
                     <th>Hiredate</th>
                     <th>Salaire</th>
                     <th>Comm</th>
