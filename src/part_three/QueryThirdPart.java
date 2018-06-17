@@ -27,7 +27,7 @@ public class QueryThirdPart {
 
         Connection connexion   = this.daoFactory.getConnection();
         Statement  statement   = connexion.createStatement();
-        ResultSet  resultatSet = statement.executeQuery("SELECT * FROM all_tab_columns WHERE OWNER = 'ROOT'");
+        ResultSet  resultatSet = statement.executeQuery("SELECT * FROM all_tab_columns WHERE OWNER = 'TRISTAN'");
 
         while (resultatSet.next()) {
             String newTableName = resultatSet.getString("TABLE_NAME");
